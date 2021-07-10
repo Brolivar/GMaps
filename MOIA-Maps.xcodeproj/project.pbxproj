@@ -14,6 +14,11 @@
 		BC2F48C42699B4B1004235A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48C22699B4B1004235A4 /* Main.storyboard */; };
 		BC2F48C92699B4B4004235A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48C72699B4B4004235A4 /* LaunchScreen.storyboard */; };
 		BC2F48DC2699C088004235A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48DB2699C088004235A4 /* Assets.xcassets */; };
+		BC2F48DE2699ED7A004235A4 /* MapModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48DD2699ED7A004235A4 /* MapModelController.swift */; };
+		BC2F48E02699EE10004235A4 /* MarkedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48DF2699EE10004235A4 /* MarkedLocation.swift */; };
+		BC2F48E42699F03A004235A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E32699F03A004235A4 /* NetworkManager.swift */; };
+		BC2F48E62699F143004235A4 /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E52699F143004235A4 /* AppURL.swift */; };
+		BC2F48E8269A02DA004235A4 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E7269A02DA004235A4 /* ApiResponses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		BC2F48C82699B4B4004235A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2F48CA2699B4B4004235A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC2F48DB2699C088004235A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC2F48DD2699ED7A004235A4 /* MapModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModelController.swift; sourceTree = "<group>"; };
+		BC2F48DF2699EE10004235A4 /* MarkedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedLocation.swift; sourceTree = "<group>"; };
+		BC2F48E32699F03A004235A4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BC2F48E52699F143004235A4 /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
+		BC2F48E7269A02DA004235A4 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				BC2F48BB2699B4B1004235A4 /* MOIA-Maps */,
-				BC2F48DB2699C088004235A4 /* Assets.xcassets */,
 				BC2F48BA2699B4B1004235A4 /* Products */,
 				7CAF96D194D051C3169E54AA /* Pods */,
 				C489D539EF97321668636274 /* Frameworks */,
@@ -77,6 +86,7 @@
 				BC2F48D02699BF44004235A4 /* Presentation */,
 				BC2F48D12699BF4D004235A4 /* Main */,
 				BC2F48CA2699B4B4004235A4 /* Info.plist */,
+				BC2F48DB2699C088004235A4 /* Assets.xcassets */,
 			);
 			path = "MOIA-Maps";
 			sourceTree = "<group>";
@@ -106,6 +116,7 @@
 		BC2F48D22699BF60004235A4 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				BC2F48DF2699EE10004235A4 /* MarkedLocation.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -113,6 +124,9 @@
 		BC2F48D32699BF64004235A4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BC2F48E22699F023004235A4 /* Objects */,
+				BC2F48E12699F01B004235A4 /* Support */,
+				BC2F48E32699F03A004235A4 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -135,6 +149,7 @@
 		BC2F48D62699BF90004235A4 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BC2F48DD2699ED7A004235A4 /* MapModelController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -169,6 +184,22 @@
 				BC2F48BE2699B4B1004235A4 /* SceneDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		BC2F48E12699F01B004235A4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48E52699F143004235A4 /* AppURL.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		BC2F48E22699F023004235A4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48E7269A02DA004235A4 /* ApiResponses.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		C489D539EF97321668636274 /* Frameworks */ = {
@@ -293,9 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2F48E42699F03A004235A4 /* NetworkManager.swift in Sources */,
+				BC2F48E8269A02DA004235A4 /* ApiResponses.swift in Sources */,
 				BC2F48C12699B4B1004235A4 /* MapViewController.swift in Sources */,
+				BC2F48E62699F143004235A4 /* AppURL.swift in Sources */,
 				BC2F48BD2699B4B1004235A4 /* AppDelegate.swift in Sources */,
+				BC2F48DE2699ED7A004235A4 /* MapModelController.swift in Sources */,
 				BC2F48BF2699B4B1004235A4 /* SceneDelegate.swift in Sources */,
+				BC2F48E02699EE10004235A4 /* MarkedLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
