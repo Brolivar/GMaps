@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		942B830268D48139BE7B80A2 /* Pods_MOIA_Maps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BD30F3B5CDEA4287057817 /* Pods_MOIA_Maps.framework */; };
 		BC2F48BD2699B4B1004235A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48BC2699B4B1004235A4 /* AppDelegate.swift */; };
 		BC2F48BF2699B4B1004235A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48BE2699B4B1004235A4 /* SceneDelegate.swift */; };
-		BC2F48C12699B4B1004235A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48C02699B4B1004235A4 /* ViewController.swift */; };
+		BC2F48C12699B4B1004235A4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48C02699B4B1004235A4 /* MapViewController.swift */; };
 		BC2F48C42699B4B1004235A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48C22699B4B1004235A4 /* Main.storyboard */; };
-		BC2F48C62699B4B4004235A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48C52699B4B4004235A4 /* Assets.xcassets */; };
 		BC2F48C92699B4B4004235A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48C72699B4B4004235A4 /* LaunchScreen.storyboard */; };
+		BC2F48DC2699C088004235A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2F48DB2699C088004235A4 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01BD30F3B5CDEA4287057817 /* Pods_MOIA_Maps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOIA_Maps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4A93228AD184BC63A60BFB /* Pods-MOIA-Maps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIA-Maps.release.xcconfig"; path = "Target Support Files/Pods-MOIA-Maps/Pods-MOIA-Maps.release.xcconfig"; sourceTree = "<group>"; };
+		2F5A35C4705A8887F7685E0D /* Pods-MOIA-Maps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOIA-Maps.debug.xcconfig"; path = "Target Support Files/Pods-MOIA-Maps/Pods-MOIA-Maps.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2F48B92699B4B1004235A4 /* MOIA-Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MOIA-Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2F48BC2699B4B1004235A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC2F48BE2699B4B1004235A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC2F48C02699B4B1004235A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC2F48C02699B4B1004235A4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BC2F48C32699B4B1004235A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BC2F48C52699B4B4004235A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC2F48C82699B4B4004235A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2F48CA2699B4B4004235A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2F48DB2699C088004235A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942B830268D48139BE7B80A2 /* Pods_MOIA_Maps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CAF96D194D051C3169E54AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F5A35C4705A8887F7685E0D /* Pods-MOIA-Maps.debug.xcconfig */,
+				2A4A93228AD184BC63A60BFB /* Pods-MOIA-Maps.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BC2F48B02699B4B0004235A4 = {
 			isa = PBXGroup;
 			children = (
 				BC2F48BB2699B4B1004235A4 /* MOIA-Maps */,
+				BC2F48DB2699C088004235A4 /* Assets.xcassets */,
 				BC2F48BA2699B4B1004235A4 /* Products */,
+				7CAF96D194D051C3169E54AA /* Pods */,
+				C489D539EF97321668636274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,110 @@
 		BC2F48BB2699B4B1004235A4 /* MOIA-Maps */ = {
 			isa = PBXGroup;
 			children = (
-				BC2F48BC2699B4B1004235A4 /* AppDelegate.swift */,
-				BC2F48BE2699B4B1004235A4 /* SceneDelegate.swift */,
-				BC2F48C02699B4B1004235A4 /* ViewController.swift */,
-				BC2F48C22699B4B1004235A4 /* Main.storyboard */,
-				BC2F48C52699B4B4004235A4 /* Assets.xcassets */,
-				BC2F48C72699B4B4004235A4 /* LaunchScreen.storyboard */,
+				BC2F48DA2699BFB5004235A4 /* Support */,
+				BC2F48D02699BF44004235A4 /* Presentation */,
+				BC2F48D12699BF4D004235A4 /* Main */,
 				BC2F48CA2699B4B4004235A4 /* Info.plist */,
 			);
 			path = "MOIA-Maps";
+			sourceTree = "<group>";
+		};
+		BC2F48D02699BF44004235A4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48D42699BF75004235A4 /* Extensions */,
+				BC2F48D92699BFA4004235A4 /* Protocols */,
+				BC2F48D82699BFA0004235A4 /* Cells */,
+				BC2F48D72699BF9A004235A4 /* Storyboards */,
+				BC2F48D62699BF90004235A4 /* Model Controllers */,
+				BC2F48D52699BF87004235A4 /* View Controllers */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BC2F48D12699BF4D004235A4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48D22699BF60004235A4 /* Objects */,
+				BC2F48D32699BF64004235A4 /* Networking */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BC2F48D22699BF60004235A4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		BC2F48D32699BF64004235A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BC2F48D42699BF75004235A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BC2F48D52699BF87004235A4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48C02699B4B1004235A4 /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BC2F48D62699BF90004235A4 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		BC2F48D72699BF9A004235A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48C22699B4B1004235A4 /* Main.storyboard */,
+				BC2F48C72699B4B4004235A4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BC2F48D82699BFA0004235A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BC2F48D92699BFA4004235A4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BC2F48DA2699BFB5004235A4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BC2F48BC2699B4B1004235A4 /* AppDelegate.swift */,
+				BC2F48BE2699B4B1004235A4 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		C489D539EF97321668636274 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01BD30F3B5CDEA4287057817 /* Pods_MOIA_Maps.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC2F48CD2699B4B4004235A4 /* Build configuration list for PBXNativeTarget "MOIA-Maps" */;
 			buildPhases = (
+				E5D21B94D364F2F6DA9D1DA1 /* [CP] Check Pods Manifest.lock */,
 				BC2F48B52699B4B0004235A4 /* Sources */,
 				BC2F48B62699B4B0004235A4 /* Frameworks */,
 				BC2F48B72699B4B0004235A4 /* Resources */,
+				AEB9110796FDA9E5F5AE6FC2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,19 +239,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC2F48C92699B4B4004235A4 /* LaunchScreen.storyboard in Resources */,
-				BC2F48C62699B4B4004235A4 /* Assets.xcassets in Resources */,
+				BC2F48DC2699C088004235A4 /* Assets.xcassets in Resources */,
 				BC2F48C42699B4B1004235A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AEB9110796FDA9E5F5AE6FC2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MOIA-Maps/Pods-MOIA-Maps-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MOIA-Maps/Pods-MOIA-Maps-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MOIA-Maps/Pods-MOIA-Maps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5D21B94D364F2F6DA9D1DA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MOIA-Maps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC2F48B52699B4B0004235A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2F48C12699B4B1004235A4 /* ViewController.swift in Sources */,
+				BC2F48C12699B4B1004235A4 /* MapViewController.swift in Sources */,
 				BC2F48BD2699B4B1004235A4 /* AppDelegate.swift in Sources */,
 				BC2F48BF2699B4B1004235A4 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +439,7 @@
 		};
 		BC2F48CE2699B4B4004235A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5A35C4705A8887F7685E0D /* Pods-MOIA-Maps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +459,7 @@
 		};
 		BC2F48CF2699B4B4004235A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4A93228AD184BC63A60BFB /* Pods-MOIA-Maps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
