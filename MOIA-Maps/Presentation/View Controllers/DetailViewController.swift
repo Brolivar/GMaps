@@ -24,6 +24,17 @@ class DetailViewController: UIViewController {
         self.requestLocationData()
     }
 
+    // Dim the background
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presentingViewController?.view.alpha = 0.3
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.presentingViewController?.view.alpha = 1
+    }
+
     @IBAction private func dismissButtonTapped(_ sender: Any) {
         self.markedLocationManager.clearLocationData()
         self.dismiss(animated: true, completion: nil)
@@ -46,7 +57,9 @@ class DetailViewController: UIViewController {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
 
-        self.markedLocationManager.requestLocationData() { status in
+        self.markedLocationManager.requestLocationData() { [weak self] status in
+
+            guard let `self` = self else { return }
 
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
@@ -58,9 +71,21 @@ class DetailViewController: UIViewController {
                         if let streetNumber = selectedLocation.getStreetNumber() {
                             headlineText += " \(String(streetNumber))"
                         }
-                        self.headlineLabel.text = headlineText
-                        // subhead label
-                        self.subheadLabel.text = "\(String(selectedLocation.getPostalCode())) \(selectedLocation.getLocality()), \(selectedLocation.getCountry())"
+
+                        // Animate both labels to soften the transition
+                        UIView.transition(with: self.headlineLabel,
+                                      duration: 0.25,
+                                       options: .transitionCrossDissolve,
+                                    animations: {
+                                        self.headlineLabel.text = headlineText
+                                 }, completion: nil)
+
+                        UIView.transition(with: self.subheadLabel,
+                                      duration: 0.25,
+                                       options: .transitionCrossDissolve,
+                                    animations: {
+                                        self.subheadLabel.text = "\(String(selectedLocation.getPostalCode())) \(selectedLocation.getLocality()), \(selectedLocation.getCountry())"
+                                 }, completion: nil)
                     } else {
                         print("Error: selected location data is nil")
                     }
@@ -68,6 +93,13 @@ class DetailViewController: UIViewController {
                     print("Error retrieving selected location")
                     self.headlineLabel.text = ""
                     self.subheadLabel.text = ""
+
+                    // Display alert
+                    let alert = UIAlertController(title: "Error retrieving location", message: "The selected location can't be retrieved", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: {_ in 
+                        self.dismiss(animated: true, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
 

@@ -27,7 +27,7 @@ class MarkedLocationModelController {
     private var networkManager: NetworkControllerProtocol = NetworkManager()
 }
 
-// MARK: - StoriesControllerProtocol extension
+// MARK: - MarkedLocationControllerProtocol extension
 extension MarkedLocationModelController: MarkedLocationControllerProtocol {
     func clearLocationData() {
         // We clear previous selected location

@@ -40,7 +40,6 @@ class MapViewController: UIViewController {
         if segue.identifier == DetailViewController.detailSegueId {
             if let destVC = segue.destination as? DetailViewController {
                 destVC.markedLocationManager = self.markedLocationManager
-                self.definesPresentationContext = true //self is presenting view controller
                 destVC.view.backgroundColor = .clear
                 destVC.modalPresentationStyle = .overCurrentContext
             }
