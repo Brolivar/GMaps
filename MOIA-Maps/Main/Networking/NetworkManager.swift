@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol NetworkControllerProtocol: AnyObject {
-    func downloadLocationData(latitude: Double, longidute: Double, completion: @escaping (Result<MarkedLocation?, NetworkError>) -> Void)
+    func downloadLocationData(latitude: Double, longitude: Double, completion: @escaping (Result<MarkedLocation?, NetworkError>) -> Void)
 }
 
 // Error tracking for the API request:
@@ -24,10 +24,10 @@ class NetworkManager {}
 
 extension NetworkManager: NetworkControllerProtocol {
 
-    func downloadLocationData(latitude: Double, longidute: Double, completion: @escaping (Result<MarkedLocation?, NetworkError>) -> Void) {
+    func downloadLocationData(latitude: Double, longitude: Double, completion: @escaping (Result<MarkedLocation?, NetworkError>) -> Void) {
 
         var markedLocation: MarkedLocation?          // Retrieved Location Data
-        if let markedLocationURL = URL(string: AppURL.base + AppURL.Api.geocode + (String(latitude)) + "," + (String(longidute)) + AppURL.Api.apiKey) {
+        if let markedLocationURL = URL(string: AppURL.base + AppURL.Api.geocode + (String(latitude)) + "," + (String(longitude)) + AppURL.Api.apiKey) {
             URLSession.shared.dataTask(with: markedLocationURL, completionHandler: { (data, response, error) in
                 do {
                     guard let responseData = data else {

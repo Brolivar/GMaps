@@ -25,6 +25,7 @@ class MapViewController: UIViewController {
         self.setupMap()
   }
 
+    // MARK: - Private functions
     private func setupMap() {
         let camera = GMSCameraPosition.camera(withLatitude: self.initialLatitude, longitude: self.initialLongitude, zoom: self.initialZoom)
         let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
@@ -32,13 +33,18 @@ class MapViewController: UIViewController {
         self.view.addSubview(mapView)
     }
 
-    private func requestSelectedLocationData(latitude: Double, longitude: Double) {
-
-        // Display popup
-        self.markedLocationManager.requestLocationData(latitude: latitude, longitude: longitude) { status in
-            print("Request completed. Latitude: ", latitude, " longitude: ", longitude)
+    // MARK: - Navigation
+    // A better solution would have been the implementation of coordinators to manage app navigation, ensuring better
+    // isolation, abstraction, and better separation of responsabilities
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == DetailViewController.detailSegueId {
+            if let destVC = segue.destination as? DetailViewController {
+                destVC.markedLocationManager = self.markedLocationManager
+                self.definesPresentationContext = true //self is presenting view controller
+                destVC.view.backgroundColor = .clear
+                destVC.modalPresentationStyle = .overCurrentContext
+            }
         }
-
     }
 }
 
@@ -47,11 +53,11 @@ extension MapViewController: GMSMapViewDelegate {
 
     // Handle the long press on map
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        print("pressed!")
         mapView.clear()
         let marker = GMSMarker(position: coordinate)
         marker.icon = UIImage(named: "MapLocationMarker")
         marker.map = mapView
-        self.requestSelectedLocationData(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        self.markedLocationManager.setSelectedCoordinates(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        performSegue(withIdentifier: DetailViewController.detailSegueId, sender: nil)
     }
 }

@@ -42,7 +42,7 @@ struct MarkedLocation: Codable {
     }
 }
 
-//// MARK: - StoryProtocol Extension
+// MARK: - MarkedLocationProtocol Extension
 extension MarkedLocation: MarkedLocationProtocol {
 
     func getStreetName() -> String {

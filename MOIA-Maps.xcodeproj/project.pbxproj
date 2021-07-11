@@ -19,6 +19,7 @@
 		BC2F48E42699F03A004235A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E32699F03A004235A4 /* NetworkManager.swift */; };
 		BC2F48E62699F143004235A4 /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E52699F143004235A4 /* AppURL.swift */; };
 		BC2F48E8269A02DA004235A4 /* ApiResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E7269A02DA004235A4 /* ApiResponses.swift */; };
+		BC2F48EA269A5006004235A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2F48E9269A5006004235A4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BC2F48E32699F03A004235A4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BC2F48E52699F143004235A4 /* AppURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
 		BC2F48E7269A02DA004235A4 /* ApiResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponses.swift; sourceTree = "<group>"; };
+		BC2F48E9269A5006004235A4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2F48C02699B4B1004235A4 /* MapViewController.swift */,
+				BC2F48E9269A5006004235A4 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC2F48EA269A5006004235A4 /* DetailViewController.swift in Sources */,
 				BC2F48E42699F03A004235A4 /* NetworkManager.swift in Sources */,
 				BC2F48E8269A02DA004235A4 /* ApiResponses.swift in Sources */,
 				BC2F48C12699B4B1004235A4 /* MapViewController.swift in Sources */,

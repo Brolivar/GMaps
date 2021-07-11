@@ -18,13 +18,93 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="xsT-9e-qHb" kind="presentation" identifier="showDetail" modalPresentationStyle="overCurrentContext" id="HiI-Wx-jNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="580" y="131"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kq9-W8-5OW">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="xsT-9e-qHb" customClass="DetailViewController" customModule="MOIA_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Tig-Di-K2P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iro-i0-ujq">
+                                <rect key="frame" x="20" y="711" width="374" height="131"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0TK-6u-Y9b">
+                                        <rect key="frame" x="166.5" y="44" width="41.5" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePI-wP-dJn" userLabel="Headline Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m24-b2-m8l" userLabel="Subhead Label">
+                                                <rect key="frame" x="0.0" y="22.5" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CT-c8-X80" userLabel="Dismiss Button">
+                                        <rect key="frame" x="330" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Yaa-oa-VQn"/>
+                                            <constraint firstAttribute="width" constant="44" id="oqx-rs-Yf1"/>
+                                        </constraints>
+                                        <state key="normal" image="CloseIconHighlighted"/>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="xsT-9e-qHb" eventType="touchUpInside" id="hh2-j8-7OR"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="R9e-Z0-iTv">
+                                        <rect key="frame" x="177" y="55.5" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4CT-c8-X80" firstAttribute="top" secondItem="iro-i0-ujq" secondAttribute="top" id="MsM-77-cE4"/>
+                                    <constraint firstItem="R9e-Z0-iTv" firstAttribute="centerY" secondItem="iro-i0-ujq" secondAttribute="centerY" id="Olo-oy-kee"/>
+                                    <constraint firstAttribute="bottom" secondItem="0TK-6u-Y9b" secondAttribute="bottom" constant="44" id="P4n-0R-i7R"/>
+                                    <constraint firstItem="0TK-6u-Y9b" firstAttribute="centerX" secondItem="iro-i0-ujq" secondAttribute="centerX" id="ZHQ-nU-fDK"/>
+                                    <constraint firstItem="R9e-Z0-iTv" firstAttribute="centerX" secondItem="iro-i0-ujq" secondAttribute="centerX" id="fxI-2L-ipU"/>
+                                    <constraint firstAttribute="trailing" secondItem="4CT-c8-X80" secondAttribute="trailing" id="m2K-kF-m9Q"/>
+                                    <constraint firstItem="0TK-6u-Y9b" firstAttribute="top" secondItem="iro-i0-ujq" secondAttribute="top" constant="44" id="vJf-0K-lgY"/>
+                                    <constraint firstItem="0TK-6u-Y9b" firstAttribute="centerY" secondItem="iro-i0-ujq" secondAttribute="centerY" id="xIi-Gh-G91"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uGl-dH-dfN"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uGl-dH-dfN" firstAttribute="trailing" secondItem="iro-i0-ujq" secondAttribute="trailing" constant="20" id="ZxX-kr-eV4"/>
+                            <constraint firstItem="iro-i0-ujq" firstAttribute="leading" secondItem="uGl-dH-dfN" secondAttribute="leading" constant="20" id="k41-NC-4Wf"/>
+                            <constraint firstItem="uGl-dH-dfN" firstAttribute="bottom" secondItem="iro-i0-ujq" secondAttribute="bottom" constant="20" id="qqR-iC-71t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0iq-j8-jgs"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="R9e-Z0-iTv" id="hED-3n-Gsr"/>
+                        <outlet property="detailView" destination="iro-i0-ujq" id="Cqv-wZ-KXN"/>
+                        <outlet property="headlineLabel" destination="ePI-wP-dJn" id="R3g-2x-kq0"/>
+                        <outlet property="subheadLabel" destination="m24-b2-m8l" id="nNi-OD-46T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sy2-PI-oeq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="131"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CloseIconHighlighted" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
